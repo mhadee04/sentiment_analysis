@@ -1,7 +1,7 @@
-from flask import Flask, redirect, request, render_template, url_for 
+from flask import Flask, render_template, request 
 from SentimentAnalysis.sentiment_analysis import sentiment_analyzer
 
-app = Flask(__name__)
+app = Flask("Sentiment Analyzer")
 
 
 @app.route("/sentimentAnalyzer")
@@ -24,4 +24,4 @@ def render_index_page():
     return render_template('index.html')
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run()
